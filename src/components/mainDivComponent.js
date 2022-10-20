@@ -1,17 +1,14 @@
-import {Link} from "react-router-dom";
+import {Outlet} from "react-router-dom";
+import "./mainDivComponentStyle.css";
+import NavigationMenu from "./navigationMenu/navigationMenu";
 
 function MainDivComponent() {
     return (
-        <div className="mainDivWrapper">
-            <div className="mainDiv">
-                <div className="mainDiv__links">
-                    <Link to="/">Форма</Link>
-                    <Link to="/colorPicker">Палитра</Link>
-                </div>
-                <div>
-                    main
-                </div>
-            </div>
+        <div className="mainWrapper">
+            <main className="main">
+                <NavigationMenu/>
+                <Outlet/>
+            </main>
         </div>
     );
 }
