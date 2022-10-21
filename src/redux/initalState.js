@@ -5,6 +5,7 @@ const initialState = {
     mainImg: null,
     mainImgURL: null,
     responseInput: '',
+    colors: [],
 };
 
 export default initialState;
