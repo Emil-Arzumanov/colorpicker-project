@@ -1,0 +1,50 @@
+.colorPicker {
+    padding-bottom: 25px;
+    height: 406px;
+    overflow: auto;
+    display: grid;
+    grid-column-gap: 25px;
+    grid-row-gap: 17px;
+    grid-template-columns: repeat(4,53px);
+    grid-auto-rows: 54px;
+    justify-content: center;
+    padding-top: 27px;
+}
+
+.colorPicker::-webkit-scrollbar {
+    background: #1f2223;
+    width: 8px;
+}
+
+.colorPicker::-webkit-scrollbar-track {
+    background-color: #000000;
+    border-radius: 100px;
+}
+
+.colorPicker::-webkit-scrollbar-thumb {
+    background: #1f2223;
+    border-radius: 100px;
+}
+
+.colorElement {
+    position: relative;
+    display: inline-block;
+    width: 54px;
+    height: 54px;
+    border-radius: 5px;
+}
+
+.deleteImageButton {
+    display: none;
+}
+
+.colorElement:hover .deleteImageButton {
+    display: block;
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+    border: none;
+    color: #8d8d93;
+    background: none;
+    transform: translate(-50%,50%);
+}

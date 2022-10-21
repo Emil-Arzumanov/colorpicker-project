@@ -5,13 +5,22 @@ const colorPickSlice = createSlice({
     name: 'colorPick',
     initialState,
     reducers: {
-        updateCurrentColor:(state, action) => {
-            state.mainImg = action.payload;
+        addNewColor:(state, action) => {
+            state.colors.push(action.payload);
+        },
+        deleteColor:(state, action) => {
+            console.log(action.payload);
+            for (let i=0;i < state.colors.length;i++) {
+                if (action.payload === i) {
+                    state.colors.splice(i,1);
+                }
+            }
         },
     }
 })
 
 export const {
-    updateCurrentColor,
+    addNewColor,
+    deleteColor,
 } = colorPickSlice.actions
 export default colorPickSlice.reducer

@@ -1,0 +1,15 @@
+.colorPickerWrapper {
+    height: 695px;
+    padding-bottom: 36px;
+}
+
+.button {
+    background: #007AFF;
+    border-radius: 8px;
+    padding: 14px 16px;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}

@@ -49,8 +49,9 @@
 .deleteImgButton {
     position: absolute;
     left: 100%;
-    top: 0;
+    bottom: 100%;
     border: none;
     color: #8d8d93;
     background: none;
+    transform: translate(-50%,50%);
 }

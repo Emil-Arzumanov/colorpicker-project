@@ -1,4 +1,5 @@
 import fileLogo from "../../../imgs/Vector.png";
+import deleteButton from "../../../imgs/Icon.png";
 import {useDispatch, useSelector} from "react-redux";
 import imgButtonStyle from "./imgAndButtonStyle.module.css"
 import {addMainImageToState, deleteImageFromState, postDataFromForm} from "../../../redux/slice/formSlice";
@@ -25,10 +26,13 @@ function ImgAndButton() {
                     </>
                     : <label htmlFor="file-upload" className={imgButtonStyle.label}>
                         <img src={formSlice.mainImgURL} className={imgButtonStyle.selectedImg} alt="No Image"/>
-                        <button
+
+                        <img
+                            src={deleteButton}
+                            alt="No Image"
                             className={imgButtonStyle.deleteImgButton}
                             onClick={() => dispatch(deleteImageFromState())}
-                        >Х</button>
+                        />
                     </label>
             }
             <button
@@ -43,5 +47,11 @@ function ImgAndButton() {
         </>
     );
 }
+/*
+<button
+                            className={imgButtonStyle.deleteImgButton}
+                            onClick={() => dispatch(deleteImageFromState())}
+                        >Х</button>
+*/
 
 export default ImgAndButton;
