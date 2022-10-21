@@ -1,7 +1,7 @@
 import colorPickerStyle from "./colorPickerColors.module.css";
 import {useDispatch, useSelector} from "react-redux";
 import deleteLogo from "../../../imgs/Icon.png";
-import {deleteColor} from "../../../redux/slice/colorPickSlice";
+import {deleteColor, updateCurrentColorId} from "../../../redux/slice/colorPickSlice";
 
 function ColorPickerColors() {
     const colorSlice = useSelector(state => state.colorPickSlice);
@@ -17,12 +17,16 @@ function ColorPickerColors() {
                                 className={colorPickerStyle.colorElement}
                                 style={{backgroundColor: elem}}
                                 key={index}
+                                onClick={() => dispatch(updateCurrentColorId(index))}
                             >
                                 <img
                                     src={deleteLogo}
                                     alt="No Image"
                                     className={colorPickerStyle.deleteImageButton}
-                                    onClick={() => dispatch(deleteColor(index))}
+                                    onClick={(event) => {
+                                        dispatch(deleteColor(index));
+                                        event.stopPropagation();
+                                    }}
                                 />
                             </div>
                         );
