@@ -1,23 +1,18 @@
-import fileLogo from "../../imgs/Vector.png";
+import {useDispatch, useSelector} from "react-redux";
+import ImgAndButton from "./imgAndButton/imgAndButton";
+import NameInputs from "./nameInputs/nameInputs";
+import Textarea from "./textarea/textarea";
+import formPageStyle from "./formPage.module.css";
 
 function FormPage() {
+    const formSlice = useSelector(state => state.formSlice);
+    const dispatch = useDispatch();
+
     return (
-        <section className="formPageSection">
-            <p className="formPageSection__p">Имя</p>
-            <input type="text" className="formPageSection__textInput"/>
-            <p className="formPageSection__p">Фамилия</p>
-            <input type="text" className="formPageSection__textInput"/>
-            <p className="formPageSection__p">Отчество</p>
-            <input type="text" className="formPageSection__textInput"/>
-            <p className="formPageSection__p">Фото</p>
-            <input type="file" className="formPageSection__fileInput"/>
-            <label htmlFor="file-upload" className="formPageSection__fileInputLabel">
-                <img src={fileLogo} className="formPageSection__fileLabel__img"/>
-            </label>
-            <input id="file-upload" type="file" className="formPageSection__fileInput"/>
-            <button className="formPageSection__button">Сохранить</button>
-            <p className="formPageSection__p">Response</p>
-            <textarea type="text" className="formPageSection__textInput response"/>
+        <section className={formPageStyle.section}>
+            <NameInputs/>
+            <ImgAndButton/>
+            <Textarea/>
         </section>
     );
 }

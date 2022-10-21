@@ -1,10 +1,11 @@
 import {Link} from "react-router-dom";
+import navStyle from "./navigationMenu.module.css";
 
 function NavigationMenu() {
     return (
-        <div  className="navMenuLinksWrapper">
-            <Link className="navMenuLink" to="/form">Форма</Link>
-            <Link className="navMenuLink" to="/colorPicker">Палитра</Link>
+        <div  className={navStyle.navWrapper}>
+            <Link className={navStyle.navLink} to="/">Форма</Link>
+            <Link className={navStyle.navLink} to="/colorPicker">Палитра</Link>
         </div>
     );
 }
