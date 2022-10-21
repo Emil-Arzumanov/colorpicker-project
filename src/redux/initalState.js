@@ -5,7 +5,10 @@ const initialState = {
     mainImg: null,
     mainImgURL: null,
     responseInput: '',
+    currentColor: "#fbd924",
+    currentColorId: 0,
     colors: [],
+    isInstrumentVisible: false,
 };
 
 export default initialState;

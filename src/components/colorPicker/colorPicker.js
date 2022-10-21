@@ -1,7 +1,8 @@
 import colorPickerStyle from "./colorPicker.module.css";
 import ColorPickerColors from "./colorPickerColors/colorPickerColors";
 import {useDispatch, useSelector} from "react-redux";
-import {addNewColor} from "../../redux/slice/colorPickSlice";
+import {addNewColor, toggleInstrumentVisibility} from "../../redux/slice/colorPickSlice";
+import ColorPickerInstrument from "./colorPickerInstrument/colorPickerInstrument";
 
 function ColorPicker() {
     const colorSlice = useSelector(state => state.colorPickSlice);
@@ -14,6 +15,7 @@ function ColorPicker() {
                 className={colorPickerStyle.button}
                 onClick={() => dispatch(addNewColor("#fbd924"))}
             >Добавить цвет</button>
+            {colorSlice.isInstrumentVisible ? <ColorPickerInstrument/> : ""}
         </section>
     );
 }
