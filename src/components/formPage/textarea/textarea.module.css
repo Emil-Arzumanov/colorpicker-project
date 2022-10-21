@@ -1,0 +1,38 @@
+.p {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 22px;
+    padding: 18px 0 5px 12px;
+    margin: 0;
+}
+
+.response {
+    width: calc(100% - 24px);
+    background: rgba(28, 28, 31);
+    border-radius: 10px;
+    border: none;
+    padding: 6.5px 12px;
+    color: #8d8d93;
+    height: 120px;
+    margin-bottom: 36px;
+    resize: none;
+}
+
+.response:focus {
+    outline: none !important;
+}
+
+.response::-webkit-scrollbar {
+    background: #000000;
+    width: 8px;
+}
+
+.response::-webkit-scrollbar-track {
+    background-color: #1f2223;
+    border-radius: 100px;
+}
+
+.response::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 100px;
+}

@@ -1,11 +1,11 @@
 import {Outlet} from "react-router-dom";
-import "./mainDivComponentStyle.css";
+import mainStyle from "./mainDivComponentStyle.module.css";
 import NavigationMenu from "./navigationMenu/navigationMenu";
 
 function MainDivComponent() {
     return (
-        <div className="mainWrapper">
-            <main className="main">
+        <div className={mainStyle.mainWrapper}>
+            <main className={mainStyle.main}>
                 <NavigationMenu/>
                 <Outlet/>
             </main>

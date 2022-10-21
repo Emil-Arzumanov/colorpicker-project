@@ -1,0 +1,21 @@
+.p {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 22px;
+    padding: 18px 0 5px 12px;
+    margin: 0;
+}
+
+.input {
+    width: calc(100% - 24px);
+    height: 23px;
+    background: rgba(28, 28, 31);
+    border-radius: 10px;
+    border: none;
+    padding: 6.5px 12px;
+    color: #8d8d93;
+}
+
+.input:focus {
+    outline: none !important;
+}
